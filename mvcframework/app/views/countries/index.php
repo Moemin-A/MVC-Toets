@@ -30,14 +30,17 @@ tr:nth-child(even) {
 $records = "";
 
 foreach ($data['users'] as $country){
-    echo "id" . $country->name;
-    $records .= "<tr> 
-    <th>"  . $record["id"] . "</th>
-    <td>"  . $record["omschrijving"] . "</td>
-    </td>
-    </tr>";
+    echo "id " . $country->id; 
+    echo "\n";
+    echo "Land " . $country->name;
+    echo "\n";
+    echo "hoofdstad " . $country->capitalCity;
+    echo "\n";
+    echo "cotinent " . $country->continent;
+    echo "\n";
+    echo "aantalbewoners " . $country->population;
 }
-// var_dump($data);
+var_dump($data);
 
 ?>
 
