@@ -12,6 +12,6 @@ class Countries extends Controller {
             'users' => $country
         ];
 
-        $this->view('index', $data);
+        $this->view('/countries/index', $data);
     }
 }
