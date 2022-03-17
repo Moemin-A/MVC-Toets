@@ -21,8 +21,6 @@ tr:nth-child(even) {
 </head>
 <body>
 
-<h2>Landenoverzicht</h2>
-
 <table>
  
 <?php
@@ -30,19 +28,52 @@ tr:nth-child(even) {
 $records = "";
 
 foreach ($data['users'] as $country){
-    echo "id " . $country->id; 
-    echo "\n";
-    echo "Land " . $country->name;
-    echo "\n";
-    echo "hoofdstad " . $country->capitalCity;
-    echo "\n";
-    echo "cotinent " . $country->continent;
-    echo "\n";
-    echo "aantalbewoners " . $country->population;
+    $records .= "<tr>
+    <th>" .  $country->id  . "</th>
+    <th>" .  $country->name  . "</th>
+    <th>" .  $country->capitalCity  . "</th>
+    <th>" .  $country->continent  . "</th>
+    <th>" .  $country->population  . "</th>";
+    
+    // echo "id " . $country->id; 
+    // echo "\n";
+    // echo "Land " . $country->name;
+    // echo "\n";
+    // echo "hoofdstad " . $country->capitalCity;
+    // echo "\n";
+    // echo "cotinent " . $country->continent;
+    // echo "\n";
+    // echo "aantalbewoners " . $country->population;
 }
-var_dump($data);
+
+// var_dump($data);
 
 ?>
+
+   <!-- Elektronica tabel-->
+   <div class="container">
+  <div class="row">
+    <div class="col">
+    <div class="col-12" id="header-text" style="">
+    <h1 style="padding-bottom: 20px; padding-top: 100px;">
+    <center>Landenoverzicht </center>
+            </h1>
+    </div>
+
+      <center> <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Land</th>
+      <th scope="col">hoofdstad</th>
+      <th scope="col">continent</th>
+      <th scope="col">aantalbewoners</th>
+    </tr>
+  </thead>
+  <?php
+    echo $records;
+    ?>
+</table> </center> 
 
 </table>
 
