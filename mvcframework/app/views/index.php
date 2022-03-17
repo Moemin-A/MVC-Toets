@@ -7,8 +7,8 @@ HOME PAGE
 
 <?php
 
-foreach ($data['users'] as $fruit){
-    echo "Information: " . $fruit->name;
-}
+// foreach ($data['users'] as $country){
+//     echo "Information: " . $country->name;
+// }
 
 ?>

@@ -5,11 +5,11 @@ class Countries extends Controller {
     }
 
     public function index() {
-        $this->userModel = $this->model('Fruit');
+        $this->userModel = $this->model('Country');
 
         $data = [
             'title' => 'Home page',
-            'users' => $countries
+            'users' => $country
         ];
 
         $this->view('index', $data);
