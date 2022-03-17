@@ -1,12 +1,12 @@
 <?php
 class Countries extends Controller {
     public function __construct() {
-        $this->userModel = $this->model('User');
+        $this->countriesModel = $this->model('Country');
     }
 
     public function index() {
-        $this->userModel = $this->model('Country');
-
+        $country = $this->countriesModel->getCountries();
+        
         $data = [
             'title' => 'Home page',
             'users' => $country
