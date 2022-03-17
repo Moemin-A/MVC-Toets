@@ -1,5 +1,5 @@
 <?php
-class Fruits extends Controller {
+class Countries extends Controller {
     public function __construct() {
         $this->userModel = $this->model('User');
     }
@@ -9,7 +9,7 @@ class Fruits extends Controller {
 
         $data = [
             'title' => 'Home page',
-            'users' => $fruit
+            'users' => $countries
         ];
 
         $this->view('index', $data);
